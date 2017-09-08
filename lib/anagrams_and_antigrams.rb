@@ -1,28 +1,25 @@
 #! user/bin/env ruby
 class Anagram
 
-  def initialize
-    @word1 = word1
-    @word2 = word2
-
+  def initialize()
   end
 
   def compare_words(word1, word2)
     word1 = word1.downcase.gsub(/\s+/, "").split("").sort!
     word2 = word2.downcase.gsub(/\s+/, "").split("").sort!
 
-    if word1 && word2.none? { |x| ['a', 'e', 'i', 'o', 'u', 'y'].include?(x) }
+    if word1 && word2.none? { |x| ['y', 'a', 'e', 'i', 'o', 'u',].include?(x) }
 
-      return "Add vowels"
+       "Need to add vowels to your word"
 
     elsif word1 == word2.join().reverse()
-      return "palindrum"
+       "palindrum"
 
     elsif word1 != word2
-      return "Anti-gram"
+       "These words are anti-grams"
 
     elsif word1 == word2
-      return "Anagram"
+       "These words are anagrams"
     end
   end
 end

@@ -2,6 +2,9 @@
 class Anagram
 
   def initialize
+    @word1 = word1
+    @word2 = word2
+
   end
 
   def compare_words(word1, word2)
@@ -15,9 +18,11 @@ class Anagram
     elsif word1 == word2.join().reverse()
       return "palindrum"
 
+    elsif word1 != word2
+      return "Anti-gram"
+
     elsif word1 == word2
       return "Anagram"
-
     end
   end
 end

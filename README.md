@@ -10,10 +10,10 @@ _A program checks how many letters two words have in common. If the words have a
 
 ## Specifications
 * _It can give specific results base of what the user inputs._
-* _Example input ruby, bury: _
+* _Example input ruby, bury:_
 * _Example output: These words are Anagrams_
 
-* _Checks for palindromes: _
+* _Checks for palindromes:_
 
 * _Example input: bat, tab_
 * _Example output: These words are palindromes._
@@ -35,7 +35,7 @@ _Still fixing some bugs_
 
 ## Support and contact details
 
-_ If you have any problems, questions, or concerns, please contact javierrcc522@gmail.com _
+_ If you have any problems, questions, or concerns, please contact javierrcc522@gmail.com_
 
 ## Technologies Used
 

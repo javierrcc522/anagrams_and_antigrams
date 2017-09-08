@@ -9,6 +9,10 @@ describe ('Anagram#anagrams_and_antigrams') do
     expect(example.compare_words('ruby', 'bury')).to(eq("These words are anagrams"))
   end
 
+  it('checks if input is a anagram with capital letters') do
+    expect(example.compare_words('rUby', 'Bury')).to(eq("These words are anagrams"))
+  end
+
   it('checks if input is not a word') do
     expect(example.compare_words('wds', 'gtd')).to(eq("Need to add vowels to your word"))
   end

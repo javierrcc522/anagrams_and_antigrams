@@ -1,10 +1,13 @@
 #! user/bin/env ruby
 class Anagram
+  def initialize(word1, word2)
+    @word1 = word1
+    @word2 = word2
+  end
+
   def compare_words(word1, word2)
-    if word1.length !=0 && word1.match((/[AEIOU]+/i)) && word2.length !=0 && word2.match((/[AEIOU]+/i))
-    return true
-    else
-    return false
-    end
+    word1 = word1.downcase.gsub(/\s+/, "").split("").sort!
+    word2 = word2.downcase.gsub(/\s+/, "").split("").sort!
+    word1==word2
   end
 end

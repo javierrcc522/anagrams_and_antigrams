@@ -2,23 +2,35 @@ require('rspec')
 require('pry')
 require('anagrams_and_antigrams')
 
-example = Anagram.new()
-
 describe ('Anagram#anagrams_and_antigrams') do
+
   it('checks if input is a anagram') do
-    expect(example.compare_words('ruby', 'bury')).to(eq("These words are anagrams"))
+    example = Anagram.new('ruby', 'bury')
+    expect(example.find_the_anagram).to(eq("These words are anagrams"))
   end
 
   it('checks if input is a anagram with capital letters') do
-    expect(example.compare_words('rUby', 'Bury')).to(eq("These words are anagrams"))
+    example = Anagram.new('rUby', 'Bury')
+    expect(example.find_the_anagram).to(eq("These words are anagrams"))
   end
 
   it('checks if input is not a word') do
-    expect(example.compare_words('wds', 'gtd')).to(eq("Need to add vowels to your word"))
+    example = Anagram.new('wds', 'gtd')
+    expect(example.find_the_anagram).to(eq("Need to add vowels to your word"))
   end
 
   it('checks if input is a anti-gram') do
-    expect(example.compare_words('hi', 'bye')).to(eq("These words are anti-grams"))
+    example = Anagram.new('hi', 'bye')
+    expect(example.find_the_anagram).to(eq("These words are anti-grams"))
   end
 
+  it('checks if input is a palindrome') do
+    example = Anagram.new('tab', 'bat')
+    expect(example.find_the_anagram).to(eq("This is a palindrome"))
+  end
+
+  it('checks if it has multiple words') do
+    example = Anagram.new('Bared, beard.', 'Bread, debar.')
+    expect(example.find_the_anagram).to(eq("These words are anagrams"))
+  end
 end
